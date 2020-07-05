@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import React, { createContext, useCallback, useState, useContext } from 'react';
 import api from '../services/api';
 
@@ -39,8 +40,8 @@ const AuthProvider: React.FC = ({ children }) => {
 
     const { token, user } = response.data;
 
-    localStorage.setItem('@GoBarber:token', token);
-    localStorage.setItem('@GoBarber:user', JSON.stringify(user));
+    localStorage.setItem('@Gobarber:token', token);
+    localStorage.setItem('@Gobarber:user', JSON.stringify(user));
 
     setData({ token, user });
   }, []);
